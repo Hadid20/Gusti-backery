@@ -4,43 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./src/css/index.css" />
+    <!-- <link rel="stylesheet" href="./src/css/index.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <style>
+      body {
+        background: conic-gradient(at bottom right, #082f49, #7dd3fc, #dcfce7);
+      }
+    </style> -->
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="title">
-          <h1>Gusti Bakery</h1>
-        </div>
-        <div class="menu">
-          <a href="">Home</a>
-          <a href="">Product</a>
-          <a href="">About</a>
-          <a href="">Order Now</a>
-          <a href="">Contact</a>
-        </div>
-      </nav>
+  <body class="flex flex-col gap-10">
+    <header
+      class="lg:px-16 px-4 bg-white flex flex-wrap items-center py-4 shadow-md"
+    >
+      <div class="flex-1 flex justify-between items-center">
+        <a href="#" class="text-xl">Ggoesti Bakery</a>
+      </div>
+
+      <label for="menu-toggle" class="pointer-cursor md:hidden block">
+        <svg
+          class="fill-current text-gray-900"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+        >
+          <title>menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+        </svg>
+      </label>
+      <input class="hidden" type="checkbox" id="menu-toggle" />
+
+      <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
+        <nav>
+          <ul
+            class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0"
+          >
+            <li><a class="md:p-4 py-3 px-0 block" href="#">Home</a></li>
+            <li><a class="md:p-4 py-3 px-0 block" href="#">Prodouct</a></li>
+            <li><a class="md:p-4 py-3 px-0 block" href="#">About</a></li>
+            <li><a class="md:p-4 py-3 px-0 block" href="#">Order</a></li>
+            <li>
+              <a class="md:p-4 py-3 px-0 block md:mb-0 mb-2" href="#"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main>
-      <div class="container hero">
-        <div class="row">
-          <img src="./src/aset/hero.png" alt="" />
-        </div>
-        <div class="row">
-          <h1>
-            Nikmati Kelezatan Setiap Gigitan BakerToko Kue ter hits se palembang
-          </h1>
-          <p>
-            Gusti Bakery adalah toko kue terpopuler di Palembang yang
-            menggabungkan cita rasa tradisional dengan sentuhan modern. Kami
-            menyajikan berbagai pilihan roti dan kue berkualitas tinggi, dibuat
-            dengan bahan segar dan teknik pembuatan yang telah teruji. Apapun
-            kebutuhan Anda—untuk sarapan cepat, hadiah manis, atau camilan
-            sore—Gusti Bakery siap memberikan pengalaman yang menggugah selera.
-            Ayo jelajahi koleksi kami dan temukan favorit Anda!
-          </p>
-          <div class="col">
-            <a href="">Lihat Produk</a>
+    <main class="flex flex-col items-center">
+      <div class="container w-full">
+        <div class="row flex justify-center">
+          <div class="col w-11/12 text-center items-center flex flex-col gap-5">
+            <img src="./src/aset/image.png" class="" alt="" />
+            <h1 class="text-4xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Voluptatum, commodi!
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+              reprehenderit mollitia sit laudantium cumque minus modi vero
+              dolorum nesciunt officiis!
+            </p>
+            <div class="flex gap-5">
+              <a
+                href=""
+                class="py-2 px-5 bg-blue-300 w-fit font-bold rounded hover:bg-blue-400 transition"
+                >Order now</a
+              >
+              <a
+                href=""
+                class="py-2 px-5 bg-blue-300 w-fit font-bold rounded hover:bg-blue-400 transition"
+                >Learn more</a
+              >
+            </div>
           </div>
         </div>
       </div>
